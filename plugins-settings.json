@@ -30,8 +30,8 @@
         "publicData": {
             "apiKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR4YXd4dXJma2dpZGduYWFqaWpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIzNDczMDQsImV4cCI6MjA2NzkyMzMwNH0.5tI4XD-kG01F8f1YRgN5TBOp5TWGSmZkH0F2WdYZOoM",
             "projectUrl": "https://txawxurfkgidgnaajijr.supabase.co",
-            "afterForbiddenPageId": "b008100a-0041-4468-a230-b6deb9365211",
-            "afterNotSignInPageId": "b008100a-0041-4468-a230-b6deb9365211"
+            "afterForbiddenPageId": "cd5b928f-f80c-45a3-8c16-94b92f4d05a9",
+            "afterNotSignInPageId": "cd5b928f-f80c-45a3-8c16-94b92f4d05a9"
         }
     },
     "66a79c98-70e7-4bc4-8859-20776b024ec2": {
