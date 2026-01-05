@@ -384,6 +384,7 @@ export default {
       }
     );
 
+    
     function refreshData() {
       nextTick(() => {
         gridApi.value?.refreshCells();
@@ -429,7 +430,7 @@ export default {
   },
   computed: {
     defaultColDef() {
-      return {
+      const definition = {
         editable: false,
         resizable: this.content.resizableColumns,
         autoHeaderHeight: this.content.headerHeightMode === "auto",
@@ -439,6 +440,12 @@ export default {
             ? `-${this.content.cellAlignment || "left"} ||`
             : null,
       };
+      if (this.content.useDynamicStyleHeader) {
+        definition.headerStyle = this.getHeaderStyle;
+      } else {
+        definition.headerStyle = {};
+      }
+      return definition;
     },
     columnDefs() {
       const columns = this.content.columns.map((col, index) => {
@@ -708,6 +715,46 @@ export default {
       if (rowNode) {
         rowNode.setSelected(false);
       }
+    },
+    getHeaderStyle(params) {
+      const colDef = params.column?.getColDef();
+      const col = this.content.columns.find(
+        (c) => c.field === colDef?.field || (c.actionName && c.actionName === colDef?.colId)
+      );
+      const id = params.column?.getColId();
+      const context = {
+        id,
+        name: colDef?.headerName || id,
+        dataType: colDef?.cellDataType,
+        type: col?.cellDataType === 'dateString' ? 'date' : (col?.cellDataType || 'auto')
+      };
+      const backgroundColor = this.resolveMappingFormula?.(
+        this.content.dynamicHeaderBackgroundColor,
+        context
+      );
+      const color = this.resolveMappingFormula?.(
+        this.content.dynamicHeaderTextColor,
+        context
+      );
+      const fontWeight = this.resolveMappingFormula?.(
+        this.content.dynamicHeaderFontWeight,
+        context
+      );
+      const fontSize = this.resolveMappingFormula?.(
+        this.content.dynamicHeaderFontSize,
+        context
+      );
+      const fontFamily = this.resolveMappingFormula?.(
+        this.content.dynamicHeaderFontFamily,
+        context
+      );
+      return {
+        backgroundColor,
+        color,
+        fontWeight,
+        fontSize,
+        fontFamily,
+      };
     },
   },
 };

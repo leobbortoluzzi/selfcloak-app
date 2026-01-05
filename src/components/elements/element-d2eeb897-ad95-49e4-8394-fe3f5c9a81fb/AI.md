@@ -32,6 +32,12 @@ A highly customizable data grid/table component that supports features like sort
 - `headerFontFamily`: `string` - Font family for header text.
 - `headerHeightMode`: `undefined|auto` - Set to auto to have auto height on the header
 - `headerHeight`: `string` - If headerHeightMode is not auto, the header height (default to the 48px of the template)
+- `useDynamicStyleHeader`: `boolean` - Enable all dynamic style for header. Then you can define one or several of the dynamic header properties, depending which one you want to overwrite.
+- `dynamicHeaderBackgroundColor`: `Formula` - Compute a dynamic background color using the column information. Column information will be provided through an object `context.mapping?.['name' | 'id' | 'type' | 'dataType']`. You can return a nullable value to fallback to the default style. `useDynamicStyleHeader` should be true to use this. Example: `wwFormulas.if(context.mapping?.['name'] == 'Total', '#f1f5f9', null)`.
+- `dynamicHeaderTextColor`: `Formula` - Compute a dynamic text color using the column information. Column information will be provided through an object `context.mapping?.['name' | 'id' | 'type' | 'dataType']`. You can return a nullable value to fallback to the default style. `useDynamicStyleHeader` should be true to use this. Example: `wwFormulas.if(context.mapping?.['id'] == 'status', '#1f2937', null)`
+- `dynamicHeaderFontWeight`: `Formula` - Compute a dynamic font weight using the column information. Column information will be provided through an object `context.mapping?.['name' | 'id' | 'type' | 'dataType']`. You can return a nullable value to fallback to the default style. `useDynamicStyleHeader` should be true to use this. Possible values: `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`\nExample: `wwFormulas.if(context.mapping?.['id'] == 'priority', 700, null)`
+- `dynamicHeaderFontSize`: `Formula` - Compute a dynamic font size using the column information. Column information will be provided through an object `context.mapping?.['name' | 'id' | 'type' | 'dataType']`. You can return a nullable value to fallback to the default style. `useDynamicStyleHeader` should be true to use this. Example: `wwFormulas.if(context.mapping?.['name'] == 'Total', '16px', null)`
+- `dynamicHeaderFontFamily`: `Formula` - Compute a dynamic font family using the column information. Column information will be provided through an object `context.mapping?.['name' | 'id' | 'type' | 'dataType']`. You can return a nullable value to fallback to the default style. `useDynamicStyleHeader` should be true to use this. Example: `wwFormulas.if(context.mapping?.['dataType'] == 'number', 'Inter', null)`",
 - `borderColor`: `string | null` - Color of grid borders.
 - `wrapperBorderRadius`: `string | null` - Border radius of the wrapper
 - `cellColor`: `string | null` - Text color of grid cells.
@@ -120,8 +126,6 @@ A highly customizable data grid/table component that supports features like sort
 - filters: ***READ ONLY*** Current filter state as an object containing active filters.
 - sort: ***READ ONLY*** Current sort state as an array of sort configurations.
 - columnsOrder: ***READ ONLY*** Current columns order state as an array of column id.
-
-
 
 ***Events:***
 - action: Triggered when clicking on a action cell. Payload: { actionName: 'name of the column', row: { /* row data */}, id: 0, index: 0, displayIndex: 0 }
