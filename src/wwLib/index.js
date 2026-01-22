@@ -5,9 +5,9 @@ import { useIconsStore } from '@/pinia/icons';
  /* wwFront:start */
 // eslint-disable-next-line no-undef
 import plugin_832d6f7a_42c3_43f1_a3ce_9a678272f811 from '@/components/plugins/plugin-832d6f7a-42c3-43f1-a3ce-9a678272f811/src/wwPlugin.js';
-import plugin_66a79c98_70e7_4bc4_8859_20776b024ec2 from '@/components/plugins/plugin-66a79c98-70e7-4bc4-8859-20776b024ec2/src/wwPlugin.js';
 import plugin_2bd1c688_31c5_443e_ae25_59aa5b6431fb from '@/components/plugins/plugin-2bd1c688-31c5-443e-ae25-59aa5b6431fb/src/wwPlugin.js';
 import plugin_f9ef41c3_1c53_4857_855b_f2f6a40b7186 from '@/components/plugins/plugin-f9ef41c3-1c53-4857-855b-f2f6a40b7186/src/wwPlugin.js';
+import plugin_01af5352_af71_4382_844b_2ec141ff243b from '@/components/plugins/plugin-01af5352-af71-4382-844b-2ec141ff243b/src/wwPlugin.js';
 import plugin_1fa0dd68_5069_436c_9a7d_3b54c340f1fa from '@/components/plugins/plugin-1fa0dd68-5069-436c-9a7d-3b54c340f1fa/src/wwPlugin.js';
 import plugin_9c40819b_4a8f_468f_9ba5_4b9699f3361f from '@/components/plugins/plugin-9c40819b-4a8f-468f-9ba5-4b9699f3361f/src/wwPlugin.js';
 /* wwFront:end */
@@ -52,9 +52,9 @@ export default {
         /* wwFront:start */
         // eslint-disable-next-line no-undef
         wwLib.wwPluginHelper.registerPlugin('plugin-832d6f7a-42c3-43f1-a3ce-9a678272f811', plugin_832d6f7a_42c3_43f1_a3ce_9a678272f811);
-wwLib.wwPluginHelper.registerPlugin('plugin-66a79c98-70e7-4bc4-8859-20776b024ec2', plugin_66a79c98_70e7_4bc4_8859_20776b024ec2);
 wwLib.wwPluginHelper.registerPlugin('plugin-2bd1c688-31c5-443e-ae25-59aa5b6431fb', plugin_2bd1c688_31c5_443e_ae25_59aa5b6431fb);
 wwLib.wwPluginHelper.registerPlugin('plugin-f9ef41c3-1c53-4857-855b-f2f6a40b7186', plugin_f9ef41c3_1c53_4857_855b_f2f6a40b7186);
+wwLib.wwPluginHelper.registerPlugin('plugin-01af5352-af71-4382-844b-2ec141ff243b', plugin_01af5352_af71_4382_844b_2ec141ff243b);
 wwLib.wwPluginHelper.registerPlugin('plugin-1fa0dd68-5069-436c-9a7d-3b54c340f1fa', plugin_1fa0dd68_5069_436c_9a7d_3b54c340f1fa);
 wwLib.wwPluginHelper.registerPlugin('plugin-9c40819b-4a8f-468f-9ba5-4b9699f3361f', plugin_9c40819b_4a8f_468f_9ba5_4b9699f3361f);
         /* wwFront:end */
@@ -121,13 +121,13 @@ wwLib.wwPluginHelper.registerPlugin('plugin-9c40819b-4a8f-468f-9ba5-4b9699f3361f
             const theme = wwLib.$store.getters['front/getTheme'];
              /* wwFront:start */
             // eslint-disable-next-line no-unreachable, no-undef
-            return theme === 'dark' ? {"c84d267e-aca4-42ac-a721-3b7e7038f55c":"#29292C","91a9e9bf-58f0-496e-8842-bb67fe2e1e3e":"#0A0A0B","61750fb7-ce41-4027-abd0-b7f8454b38bb":"#f5f5f5","b705576b-a4b6-40ae-9300-90a2c131c459":"#9E9FA9","dede1d36-9171-4491-b47a-b44c408b4a9a":"#18181B","a52406f5-164e-4f7f-b914-0e64665f72b1":"#FFFFFF1A","61300527-5a6a-425e-a20c-eebff7fa0a4d":"#00000080"} : {"c84d267e-aca4-42ac-a721-3b7e7038f55c":"#F5F5F5","91a9e9bf-58f0-496e-8842-bb67fe2e1e3e":"#FBFBFB","61750fb7-ce41-4027-abd0-b7f8454b38bb":"#202328","b705576b-a4b6-40ae-9300-90a2c131c459":"#71717B","dede1d36-9171-4491-b47a-b44c408b4a9a":"#FFFFFF","a52406f5-164e-4f7f-b914-0e64665f72b1":"#0000001A","61300527-5a6a-425e-a20c-eebff7fa0a4d":"#FFFFFF80"};
+            return theme === 'dark' ? {"c84d267e-aca4-42ac-a721-3b7e7038f55c":"#29292C","91a9e9bf-58f0-496e-8842-bb67fe2e1e3e":"#0A0A0B","61750fb7-ce41-4027-abd0-b7f8454b38bb":"#f5f5f5","b705576b-a4b6-40ae-9300-90a2c131c459":"#9E9FA9","dede1d36-9171-4491-b47a-b44c408b4a9a":"#18181B","4db95610-e50a-4e6f-a93c-f081e0ae8814":"#3e3e38"} : {"c84d267e-aca4-42ac-a721-3b7e7038f55c":"#F5F5F5","91a9e9bf-58f0-496e-8842-bb67fe2e1e3e":"#FBFBFB","61750fb7-ce41-4027-abd0-b7f8454b38bb":"#202328","b705576b-a4b6-40ae-9300-90a2c131c459":"#71717B","dede1d36-9171-4491-b47a-b44c408b4a9a":"#FFFFFF","4db95610-e50a-4e6f-a93c-f081e0ae8814":"#dad9d4"};
             /* wwFront:end */
         }),
         spacings:
          /* wwFront:start */
         // eslint-disable-next-line no-unreachable, no-undef
-        {"c4c18280-cad0-4aac-ad31-ee2084dc993e":"-0.05em","18e22aec-ed77-418c-8014-92c9cdcc6ff0":"30px","a3d30644-755a-4c69-a857-cf6515769693":"10px","3de73242-1684-442f-b0b2-a9031a747399":"10px"},
+        {},
         /* wwFront:end */
         typographies:
          /* wwFront:start */
