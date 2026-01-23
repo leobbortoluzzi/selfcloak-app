@@ -68,7 +68,7 @@
             "clientId": "627648992277-1cs8p0ghp68qsikn21kaieu8dts9svjq.apps.googleusercontent.com",
             "responseType": "id_token",
             "afterSignInPageId": "8d6b7c86-3af9-46d7-a3c1-97bec4b5d21a",
-            "disableAutoRefresh": true,
+            "disableAutoRefresh": false,
             "afterNotSignInPageId": "cd5b928f-f80c-45a3-8c16-94b92f4d05a9"
         }
     },
