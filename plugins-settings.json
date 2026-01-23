@@ -71,5 +71,12 @@
             "disableAutoRefresh": true,
             "afterNotSignInPageId": "cd5b928f-f80c-45a3-8c16-94b92f4d05a9"
         }
+    },
+    "1c5f5c0f-5609-4031-9e57-5bb4811be7b3": {
+        "id": "533da5bc-839f-4dae-bd20-541305aeb5f6",
+        "name": "Youtube",
+        "designId": "4beff381-6b43-49d8-bb3c-5539a893126d",
+        "pluginId": "1c5f5c0f-5609-4031-9e57-5bb4811be7b3",
+        "publicData": {}
     }
 }
